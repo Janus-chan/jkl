@@ -1,0 +1,85 @@
+* {
+  margin: 0px;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.seat {
+  position: relative;
+}
+
+p:nth-of-type(1) {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3em;
+  color: #fff;
+  top: 6rem;
+  left: .5rem;
+  right: .5rem;
+  position: absolute;
+}
+
+.seat video {
+  position: absolute;
+  max-width: 100%;
+  z-index: -4;
+}
+
+
+
+.lists {
+   top:0%;
+  left:-100%;
+   width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  background-color: #fff;
+  z-index: 300;
+  position:fixed;
+  transition: all 800ms;
+}
+
+.lists.hot{
+  right: 0%;
+ left: 0%;
+}
+
+.lists li {
+  list-style: none;
+  font-size: 3rem;
+}
+.ham{
+  background: url("./menu3.png");
+  background-size: cover;
+  height: 49px;
+  width: 67px;
+  max-width: 500px;
+  position: relative;
+  right: -10%;
+  cursor: pointer;
+  z-index: 5000;
+}
+.ham.hot{
+  background: url("./wrong.png");
+  height: 47px;
+  width: 47px;
+  background-size: cover;
+  position: fixed;
+  left: 10%;
+  transition: all 800ms;
+}
+
+@@media (max-width:900px) {
+      .lists{
+           width: 100px;
+      }
+      .lists.hot{
+        left:30px;
+      }
+
+}
